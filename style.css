@@ -1,0 +1,37 @@
+/* Use the Inter font loaded from Google Fonts for the 'sans' class */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom animation for the breathing exercise */
+@keyframes ping-slow {
+  75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Tailwind CSS Aspect Ratio Plugin classes (for embedded videos) */
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+}
+
+.aspect-h-9 {
+  /* This class is used with aspect-w-*, so it doesn't need styles itself */
+}
+
+.aspect-w-16 > *,
+.aspect-h-9 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
